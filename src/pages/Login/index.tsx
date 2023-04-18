@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 function LoginPage() {
   return (
     <h1>Login Page</h1>
-  )
+  );
 }
 
-export { LoginPage }
+export { LoginPage };
