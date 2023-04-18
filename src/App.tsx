@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { LoginPage } from "./pages/Login"
+import { GlobalStyle } from "./styles/global"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <h1>Olá Mundo</h1>
+    <>
+      <LoginPage />
+      <GlobalStyle />
+    </>
   )
 }
 
