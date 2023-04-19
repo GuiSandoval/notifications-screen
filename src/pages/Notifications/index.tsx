@@ -15,11 +15,9 @@ function NotificationsPage() {
     loadNotifications();
   }, []);
 
-  if (!notifications) return <div>Loading...</div>;
-
   return (
     <S.Container>
-      <Header />
+      <Header notifications={notifications} />
     </S.Container>
   );
 }
