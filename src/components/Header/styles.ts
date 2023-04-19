@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  background: #fff;
-  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  background: #fff;
+  height: 4rem;
+  width: 100%;
   padding: 1rem;
 `;
 

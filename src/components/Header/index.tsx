@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styles';
-import { NotificationIcon } from '../common/icons/NotificationIcon';
+import { NotificationIcon } from '../../common/icons/NotificationIcon';
+import { Modal } from '../../common/Modal';
 
 function Header() {
-  function handleShowNotifications() {
-    console.log('show notifications');
-  }
+  const [isShowing, setIsShowing] = useState(false);
+
+  const handleOpen = () => (isShowing ? setIsShowing(false) : setIsShowing(true));
+  const handleClose = () => setIsShowing(false);
 
   return (
     <S.Container>
-      <S.Button onClick={() => handleShowNotifications()}>
-        <NotificationIcon />
-      </S.Button>
+
+      <Modal
+        isShowing={isShowing}
+        onClose={handleClose}
+        ButtonHandle={(
+          <S.Button onClick={() => handleOpen()}>
+            <NotificationIcon />
+          </S.Button>
+        )}
+      >
+        <h1>Olá</h1>
+      </Modal>
     </S.Container>
   );
 }
